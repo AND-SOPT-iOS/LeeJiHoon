@@ -15,6 +15,8 @@
 		78E6CF532CBA5D13001CEDCE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E6CF522CBA5D13001CEDCE /* DetailViewController.swift */; };
 		78E6CF572CBA5D5D001CEDCE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 78E6CF562CBA5D5D001CEDCE /* SnapKit */; };
 		78E6CF592CBA5E1C001CEDCE /* TossViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E6CF582CBA5E1C001CEDCE /* TossViewcontroller.swift */; };
+		78E6CF5C2CBA5EAE001CEDCE /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 78E6CF5B2CBA5EAE001CEDCE /* Then */; };
+		78E6CF602CBA5ED4001CEDCE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E6CF5F2CBA5ED4001CEDCE /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,7 @@
 		78E6CF4F2CBA5CFB001CEDCE /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../35thSeminar/SceneDelegate.swift; sourceTree = "<group>"; };
 		78E6CF522CBA5D13001CEDCE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		78E6CF582CBA5E1C001CEDCE /* TossViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TossViewcontroller.swift; sourceTree = "<group>"; };
+		78E6CF5F2CBA5ED4001CEDCE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../../35thSeminar/ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78E6CF572CBA5D5D001CEDCE /* SnapKit in Frameworks */,
+				78E6CF5C2CBA5EAE001CEDCE /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,11 +64,11 @@
 		78E6CF392CBA5C53001CEDCE /* 35thSeminaaaa */ = {
 			isa = PBXGroup;
 			children = (
+				78E6CF5D2CBA5EC3001CEDCE /* Practice */,
 				78E6CF542CBA5D44001CEDCE /* assignment */,
 				78E6CF3A2CBA5C53001CEDCE /* AppDelegate.swift */,
 				78E6CF4F2CBA5CFB001CEDCE /* SceneDelegate.swift */,
 				78E6CF4E2CBA5CFB001CEDCE /* ViewController.swift */,
-				78E6CF522CBA5D13001CEDCE /* DetailViewController.swift */,
 				78E6CF432CBA5C54001CEDCE /* Assets.xcassets */,
 				78E6CF452CBA5C54001CEDCE /* LaunchScreen.storyboard */,
 				78E6CF482CBA5C54001CEDCE /* Info.plist */,
@@ -78,6 +82,15 @@
 				78E6CF582CBA5E1C001CEDCE /* TossViewcontroller.swift */,
 			);
 			path = assignment;
+			sourceTree = "<group>";
+		};
+		78E6CF5D2CBA5EC3001CEDCE /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				78E6CF5F2CBA5ED4001CEDCE /* ViewController.swift */,
+				78E6CF522CBA5D13001CEDCE /* DetailViewController.swift */,
+			);
+			path = Practice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +111,7 @@
 			name = 35thSeminaaaa;
 			packageProductDependencies = (
 				78E6CF562CBA5D5D001CEDCE /* SnapKit */,
+				78E6CF5B2CBA5EAE001CEDCE /* Then */,
 			);
 			productName = 35thSeminaaaa;
 			productReference = 78E6CF372CBA5C53001CEDCE /* 35thSeminaaaa.app */;
@@ -129,6 +143,7 @@
 			mainGroup = 78E6CF2E2CBA5C53001CEDCE;
 			packageReferences = (
 				78E6CF552CBA5D5D001CEDCE /* XCRemoteSwiftPackageReference "SnapKit" */,
+				78E6CF5A2CBA5EAE001CEDCE /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = 78E6CF382CBA5C53001CEDCE /* Products */;
 			projectDirPath = "";
@@ -156,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78E6CF602CBA5ED4001CEDCE /* ViewController.swift in Sources */,
 				78E6CF512CBA5CFB001CEDCE /* SceneDelegate.swift in Sources */,
 				78E6CF3B2CBA5C53001CEDCE /* AppDelegate.swift in Sources */,
 				78E6CF502CBA5CFB001CEDCE /* ViewController.swift in Sources */,
@@ -383,6 +399,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		78E6CF5A2CBA5EAE001CEDCE /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -390,6 +414,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 78E6CF552CBA5D5D001CEDCE /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		78E6CF5B2CBA5EAE001CEDCE /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78E6CF5A2CBA5EAE001CEDCE /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
