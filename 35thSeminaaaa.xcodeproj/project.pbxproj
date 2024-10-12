@@ -14,6 +14,7 @@
 		78E6CF512CBA5CFB001CEDCE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E6CF4F2CBA5CFB001CEDCE /* SceneDelegate.swift */; };
 		78E6CF532CBA5D13001CEDCE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E6CF522CBA5D13001CEDCE /* DetailViewController.swift */; };
 		78E6CF572CBA5D5D001CEDCE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 78E6CF562CBA5D5D001CEDCE /* SnapKit */; };
+		78E6CF592CBA5E1C001CEDCE /* TossViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E6CF582CBA5E1C001CEDCE /* TossViewcontroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		78E6CF4E2CBA5CFB001CEDCE /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../35thSeminar/ViewController.swift; sourceTree = "<group>"; };
 		78E6CF4F2CBA5CFB001CEDCE /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../35thSeminar/SceneDelegate.swift; sourceTree = "<group>"; };
 		78E6CF522CBA5D13001CEDCE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		78E6CF582CBA5E1C001CEDCE /* TossViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TossViewcontroller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		78E6CF542CBA5D44001CEDCE /* assignment */ = {
 			isa = PBXGroup;
 			children = (
+				78E6CF582CBA5E1C001CEDCE /* TossViewcontroller.swift */,
 			);
 			path = assignment;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				78E6CF512CBA5CFB001CEDCE /* SceneDelegate.swift in Sources */,
 				78E6CF3B2CBA5C53001CEDCE /* AppDelegate.swift in Sources */,
 				78E6CF502CBA5CFB001CEDCE /* ViewController.swift in Sources */,
+				78E6CF592CBA5E1C001CEDCE /* TossViewcontroller.swift in Sources */,
 				78E6CF532CBA5D13001CEDCE /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
