@@ -76,59 +76,59 @@ class TossViewcontroller: UIViewController {
     }
     
     private func setupConstraints() {
-        scrollView.snp.makeConstraints { make in
-            make.edges.equalTo(view.safeAreaLayoutGuide)
+        scrollView.snp.makeConstraints {
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
         }
         
-        contentView.snp.makeConstraints { make in
-            make.edges.equalTo(scrollView)
-            make.width.equalTo(scrollView)
+        contentView.snp.makeConstraints {
+            $0.edges.equalTo(scrollView)
+            $0.width.equalTo(scrollView)
         }
         
-        titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(contentView).offset(40)
-            make.leading.trailing.equalTo(contentView).inset(20)
+        titleLabel.snp.makeConstraints {
+            $0.top.equalTo(contentView).offset(40)
+            $0.leading.trailing.equalTo(contentView).inset(20)
         }
         
-        versionButton.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(40)
-            make.leading.equalTo(contentView).offset(20)
-            make.height.equalTo(44)
+        versionButton.snp.makeConstraints {
+            $0.top.equalTo(titleLabel.snp.bottom).offset(40)
+            $0.leading.equalTo(contentView).offset(20)
+            $0.height.equalTo(44)
         }
         
-        openButton.snp.makeConstraints { make in
-            make.top.equalTo(versionButton.snp.bottom).offset(30)
-            make.leading.equalTo(contentView).offset(20)
-            make.height.equalTo(44)
+        openButton.snp.makeConstraints {
+            $0.top.equalTo(versionButton.snp.bottom).offset(30)
+            $0.leading.equalTo(contentView).offset(20)
+            $0.height.equalTo(44)
         }
         
-        shareButton.snp.makeConstraints { make in
-            make.top.equalTo(openButton.snp.bottom).offset(30)
-            make.leading.equalTo(contentView).offset(20)
-            make.height.equalTo(44)
+        shareButton.snp.makeConstraints {
+            $0.top.equalTo(openButton.snp.bottom).offset(30)
+            $0.leading.equalTo(contentView).offset(20)
+            $0.height.equalTo(44)
         }
         
-        previewImageView.snp.makeConstraints { make in
-            make.top.equalTo(shareButton.snp.bottom).offset(40)
-            make.leading.trailing.equalTo(contentView).inset(20)
-            make.height.equalTo(300)
+        previewImageView.snp.makeConstraints {
+            $0.top.equalTo(shareButton.snp.bottom).offset(40)
+            $0.leading.trailing.equalTo(contentView).inset(20)
+            $0.height.equalTo(300)
         }
         
-        ratingLabel.snp.makeConstraints { make in
-            make.top.equalTo(previewImageView.snp.bottom).offset(40)
-            make.leading.equalTo(contentView).offset(20)
+        ratingLabel.snp.makeConstraints {
+            $0.top.equalTo(previewImageView.snp.bottom).offset(40)
+            $0.leading.equalTo(contentView).offset(20)
         }
         
-        showAllReviewsButton.snp.makeConstraints { make in
-            make.centerY.equalTo(ratingLabel)
-            make.trailing.equalTo(contentView).offset(-20)
+        showAllReviewsButton.snp.makeConstraints {
+            $0.centerY.equalTo(ratingLabel)
+            $0.trailing.equalTo(contentView).offset(-20)
         }
         
-        writeReviewButton.snp.makeConstraints { make in
-            make.top.equalTo(ratingLabel.snp.bottom).offset(40)
-            make.leading.trailing.equalTo(contentView).inset(20)
-            make.height.equalTo(60)
-            make.bottom.equalTo(contentView).offset(-40)
+        writeReviewButton.snp.makeConstraints {
+            $0.top.equalTo(ratingLabel.snp.bottom).offset(40)
+            $0.leading.trailing.equalTo(contentView).inset(20)
+            $0.height.equalTo(60)
+            $0.bottom.equalTo(contentView).offset(-40)
         }
     }
     
