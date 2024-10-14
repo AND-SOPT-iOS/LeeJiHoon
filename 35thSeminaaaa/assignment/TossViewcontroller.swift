@@ -10,8 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-class TossViewcontroller
-: UIViewController {
+class TossViewcontroller: UIViewController {
     
     private let scrollView = UIScrollView()
     private let contentView = UIView()
@@ -34,6 +33,17 @@ class TossViewcontroller
         $0.textColor = .gray
     }
     
+    private let categoryDescriptionLabel = UILabel().then {
+        $0.text = "차트"
+        $0.font = .systemFont(ofSize: 12)
+        $0.textColor = .gray
+    }
+    
+    private let categoryLabel = UILabel().then {
+        $0.text = "👶"
+        $0.font = .boldSystemFont(ofSize: 28)
+    }
+    
     private let getButton = UIButton(type: .system).then {
         $0.setTitle("열기", for: .normal)
         $0.backgroundColor = .systemBlue
@@ -51,15 +61,15 @@ class TossViewcontroller
         $0.font = .boldSystemFont(ofSize: 28)
     }
     
-    private let ratingStarsLabel = UILabel().then {
-        $0.text = "★★★★☆"
-        $0.font = .systemFont(ofSize: 10)
-    }
-    
     private let ratingCountLabel = UILabel().then {
         $0.text = "8.4만개의 평가"
         $0.font = .systemFont(ofSize: 12)
         $0.textColor = .gray
+    }
+    
+    private let ratingStarsLabel = UILabel().then {
+        $0.text = "★★★★☆"
+        $0.font = .systemFont(ofSize: 10)
     }
     
     private let ageRatingLabel = UILabel().then {
@@ -73,16 +83,6 @@ class TossViewcontroller
         $0.textColor = .gray
     }
     
-    private let developerLabel = UILabel().then {
-        $0.text = "개발자"
-        $0.font = .boldSystemFont(ofSize: 16)
-    }
-    
-    private let developerNameLabel = UILabel().then {
-        $0.text = "㈜비바리퍼블리카"
-        $0.font = .systemFont(ofSize: 14)
-        $0.textColor = .systemBlue
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,10 +96,9 @@ class TossViewcontroller
         scrollView.addSubview(contentView)
         
         [appIconImageView, appNameLabel, appDescriptionLabel, getButton, shareButton,
-         ratingView, ageRatingLabel, ageRatingDescriptionLabel,
-         developerLabel, developerNameLabel].forEach { contentView.addSubview($0) }
+         ratingView, categoryDescriptionLabel, categoryLabel, ageRatingDescriptionLabel, ageRatingLabel].forEach { contentView.addSubview($0) }
         
-        [ratingLabel, ratingStarsLabel, ratingCountLabel].forEach { ratingView.addSubview($0) }
+        [ratingCountLabel, ratingLabel, ratingStarsLabel].forEach { ratingView.addSubview($0) }
         
         setupConstraints()
     }
@@ -142,47 +141,44 @@ class TossViewcontroller
             $0.trailing.equalTo(contentView).offset(-20)
             $0.width.height.equalTo(30)
         }
-        
         ratingView.snp.makeConstraints {
             $0.top.equalTo(appIconImageView.snp.bottom).offset(30)
             $0.leading.equalTo(contentView).offset(20)
             $0.width.equalTo(100)
         }
         
-        ratingLabel.snp.makeConstraints {
+        ratingCountLabel.snp.makeConstraints {
             $0.top.leading.equalTo(ratingView)
+        }
+        
+        ratingLabel.snp.makeConstraints {
+            $0.top.equalTo(ratingCountLabel.snp.bottom).offset(4)
+            $0.leading.equalTo(ratingCountLabel)
         }
         
         ratingStarsLabel.snp.makeConstraints {
             $0.top.equalTo(ratingLabel.snp.bottom).offset(4)
-            $0.leading.equalTo(ratingView)
+            $0.leading.equalTo(ratingLabel)
         }
         
-        ratingCountLabel.snp.makeConstraints {
-            $0.top.equalTo(ratingStarsLabel.snp.bottom).offset(4)
-            $0.leading.equalTo(ratingView)
-            $0.bottom.equalTo(ratingView)
-        }
-        
-        ageRatingLabel.snp.makeConstraints {
+        categoryDescriptionLabel.snp.makeConstraints {
             $0.top.equalTo(ratingView)
             $0.leading.equalTo(ratingView.snp.trailing).offset(40)
         }
         
+        categoryLabel.snp.makeConstraints {
+            $0.top.equalTo(categoryDescriptionLabel.snp.bottom).offset(4)
+            $0.leading.equalTo(categoryDescriptionLabel)
+        }
+        
         ageRatingDescriptionLabel.snp.makeConstraints {
-            $0.top.equalTo(ageRatingLabel.snp.bottom).offset(4)
-            $0.leading.equalTo(ageRatingLabel)
+            $0.top.equalTo(ratingView)
+            $0.leading.equalTo(categoryLabel.snp.trailing).offset(40)
         }
         
-        developerLabel.snp.makeConstraints {
-            $0.top.equalTo(ratingView.snp.bottom).offset(30)
-            $0.leading.equalTo(contentView).offset(20)
-        }
-        
-        developerNameLabel.snp.makeConstraints {
-            $0.top.equalTo(developerLabel.snp.bottom).offset(4)
-            $0.leading.equalTo(developerLabel)
-            $0.bottom.equalTo(contentView).offset(-20)
+        ageRatingLabel.snp.makeConstraints {
+            $0.top.equalTo(ageRatingDescriptionLabel.snp.bottom).offset(4)
+            $0.leading.equalTo(ageRatingDescriptionLabel)
         }
     }
 }
