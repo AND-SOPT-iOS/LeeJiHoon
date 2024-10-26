@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		782E8C4C2CCCAF0100C8CB15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E8C4B2CCCAF0100C8CB15 /* ViewController.swift */; };
 		782E8C4E2CCCAF0900C8CB15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E8C4D2CCCAF0900C8CB15 /* SceneDelegate.swift */; };
-		782E8C512CCCB51900C8CB15 /* tableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E8C502CCCB51900C8CB15 /* tableViewCell.swift */; };
+		782E8C512CCCB51900C8CB15 /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E8C502CCCB51900C8CB15 /* ChartCell.swift */; };
 		782E8C532CCCB5C500C8CB15 /* tableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E8C522CCCB5C500C8CB15 /* tableViewController.swift */; };
 		782E8C552CCCB60D00C8CB15 /* tableviewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E8C542CCCB60D00C8CB15 /* tableviewApp.swift */; };
 		78E6CF3B2CBA5C53001CEDCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E6CF3A2CBA5C53001CEDCE /* AppDelegate.swift */; };
@@ -24,7 +24,7 @@
 /* Begin PBXFileReference section */
 		782E8C4B2CCCAF0100C8CB15 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		782E8C4D2CCCAF0900C8CB15 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		782E8C502CCCB51900C8CB15 /* tableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewCell.swift; sourceTree = "<group>"; };
+		782E8C502CCCB51900C8CB15 /* ChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCell.swift; sourceTree = "<group>"; };
 		782E8C522CCCB5C500C8CB15 /* tableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewController.swift; sourceTree = "<group>"; };
 		782E8C542CCCB60D00C8CB15 /* tableviewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableviewApp.swift; sourceTree = "<group>"; };
 		78E6CF372CBA5C53001CEDCE /* 35thSeminaaaa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 35thSeminaaaa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,7 +59,7 @@
 		782E8C562CCCB61D00C8CB15 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				782E8C502CCCB51900C8CB15 /* tableViewCell.swift */,
+				782E8C502CCCB51900C8CB15 /* ChartCell.swift */,
 				782E8C522CCCB5C500C8CB15 /* tableViewController.swift */,
 				782E8C542CCCB60D00C8CB15 /* tableviewApp.swift */,
 			);
@@ -200,7 +200,7 @@
 				78E6CF532CBA5D13001CEDCE /* DetailViewController.swift in Sources */,
 				782E8C532CCCB5C500C8CB15 /* tableViewController.swift in Sources */,
 				782E8C4E2CCCAF0900C8CB15 /* SceneDelegate.swift in Sources */,
-				782E8C512CCCB51900C8CB15 /* tableViewCell.swift in Sources */,
+				782E8C512CCCB51900C8CB15 /* ChartCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

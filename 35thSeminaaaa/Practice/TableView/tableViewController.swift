@@ -5,62 +5,73 @@
 //  Created by 이지훈 on 10/26/24.
 //
 
-import Foundation
 import UIKit
+import SnapKit
 
-class tableViewController : UIViewController {
+class TableViewController: UIViewController {
     
+    // MARK: - Properties
+    
+    private let tableView = UITableView()
+    private let appList = App.mockData
+    
+    // MARK: - Life Cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setStyle()
+        setUI()
+        setLayout()
+        setTableView()
+    }
+    
+    // MARK: - UI Setup
     
     private func setStyle() {
-        titleLabel.do {
-            $0.numberOfLines = 2
-        }
-        verticalStackView.do {
-            $0.axis = .vertical
-            $0.alignment = .top
-            $0.distribution = .equalSpacing
-            $0.spacing = 4
-        }
+        view.backgroundColor = .white
+        tableView.backgroundColor = .white
+        tableView.separatorStyle = .singleLine
+        tableView.rowHeight = 100
     }
     
     private func setUI() {
-        [
-            iconImageView,
-            rankingLabel,
-            verticalStackView,
-            downloadButton
-        ].forEach { addSubview($0) }
-        
-        [
-            titleLabel,
-            subTitleLabel
-        ].forEach { verticalStackView.addArrangedSubview($0) }
+        view.addSubview(tableView)
     }
     
     private func setLayout() {
-        iconImageView.snp.makeConstraints {
-            $0.centerY.equalToSuperview()
-            $0.leading.equalToSuperview().offset(20)
-            $0.size.equalTo(80)
+        tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
         }
+    }
+    
+    private func setTableView() {
+        tableView.register(ChartCell.self, forCellReuseIdentifier: ChartCell.identifier)
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension TableViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return appList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: ChartCell.identifier,
+            for: indexPath
+        ) as? ChartCell else { return UITableViewCell() }
         
-        rankingLabel.snp.makeConstraints {
-            $0.leading.equalTo(iconImageView.snp.trailing).offset(8)
-            $0.top.equalToSuperview().offset(12)
-        }
-        
-        verticalStackView.snp.makeConstraints {
-            $0.leading.equalTo(rankingLabel.snp.trailing).offset(8)
-            $0.trailing.equalTo(downloadButton.snp.leading).offset(-20)
-            $0.top.equalToSuperview().inset(12)
-            $0.bottom.greaterThanOrEqualToSuperview().inset(12)
-        }
-        
-        downloadButton.snp.makeConstraints {
-            $0.centerY.equalToSuperview()
-            $0.trailing.equalToSuperview().offset(-20)
-            $0.width.equalTo(44)
-            $0.height.equalTo(20)
-        }
+        cell.configure(with: appList[indexPath.row])
+        return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension TableViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

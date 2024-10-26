@@ -34,16 +34,17 @@ enum DownloadState {
 }
 
 extension App {
-    static let mockData : [App] = [
-        App(iconImage: UIImage(named: "figure.walk")!, ranking: 1, title: "KakaoTalk", subTitle: "카카오톡", downloadState: .installed, category: .social),
-        App(iconImage: UIImage(named: "figure.walk")!, ranking: 2, title: "YouTube", subTitle: "유튜브", downloadState: .download, category: .entertainment),
-        App(iconImage: UIImage(named: "figure.walk")!, ranking: 3, title: "Naver", subTitle: "네이버", downloadState: .reDownload, category: .social),
-        App(iconImage: UIImage(named: "figure.walk")!, ranking: 4, title: "TikTok", subTitle: "틱톡", downloadState: .update, category: .entertainment),
-        App(iconImage: UIImage(named: "figure.walk")!, ranking: 5, title: "Instagram", subTitle: "인스타그램", downloadState: .download, category: .social),
-        App(iconImage: UIImage(named: "figure.walk")!, ranking: 6, title: "Twitter", subTitle: "트위터", downloadState: .download, category: .social),
-        App(iconImage: UIImage(named: "figure.walk")!, ranking: 7, title: "Facebook", subTitle: "페이스북", downloadState: .download, category: .social),
-        App(iconImage: UIImage(named: "figure.walk")!, ranking: 8, title: "Netflix", subTitle: "넷플릭스", downloadState: .download, category: .entertainment),
-        App(iconImage: UIImage(named: "figure.walk")!, ranking: 9, title: "Spotify", subTitle: "스포티파이", downloadState: .download, category: .entertainment),
-        App(iconImage: UIImage(named: "figure.walk")!, ranking: 10, title: "Twitch", subTitle: "트위치", downloadState: .download, category: .entertainment),
-        App(iconImage: UIImage(named: "figure.walk")!, ranking: 11, title: "TikTok", subTitle: "틱톡", downloadState: .update, category: .entertainment),]
+    static let mockData: [App] = [
+        App(iconImage: UIImage(named: "toss")!, ranking: 1, title: "KakaoTalk", subTitle: "카카오톡", downloadState: .installed, category: .social),
+        App(iconImage: UIImage(named: "toss")!, ranking: 2, title: "YouTube", subTitle: "유튜브", downloadState: .download, category: .entertainment),
+        App(iconImage: UIImage(named: "toss")!, ranking: 3, title: "Naver", subTitle: "네이버", downloadState: .reDownload, category: .social),
+        App(iconImage: UIImage(named: "toss")!, ranking: 4, title: "TikTok", subTitle: "틱톡", downloadState: .update, category: .entertainment),
+        App(iconImage: UIImage(named: "toss")!, ranking: 5, title: "Instagram", subTitle: "인스타그램", downloadState: .download, category: .social),
+        App(iconImage: UIImage(named: "toss")!, ranking: 6, title: "Twitter", subTitle: "트위터", downloadState: .download, category: .social),
+        App(iconImage: UIImage(named: "toss")!, ranking: 7, title: "Facebook", subTitle: "페이스북", downloadState: .download, category: .social),
+        App(iconImage: UIImage(named: "toss")!, ranking: 8, title: "Netflix", subTitle: "넷플릭스", downloadState: .download, category: .entertainment),
+        App(iconImage: UIImage(named: "toss")!, ranking: 9, title: "Spotify", subTitle: "스포티파이", downloadState: .download, category: .entertainment),
+        App(iconImage: UIImage(named: "toss")!, ranking: 10, title: "Twitch", subTitle: "트위치", downloadState: .download, category: .entertainment),
+        App(iconImage: UIImage(named: "toss")!, ranking: 11, title: "TikTok", subTitle: "틱톡", downloadState: .update, category: .entertainment)
+    ]
 }
