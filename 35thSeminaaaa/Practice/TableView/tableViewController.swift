@@ -7,12 +7,18 @@
 
 import UIKit
 import SnapKit
+import Then
 
 class TableViewController: UIViewController {
     
     // MARK: - Properties
     
-    private let tableView = UITableView()
+    private let tableView = UITableView().then {
+        $0.backgroundColor = .white
+        $0.separatorStyle = .singleLine
+        $0.rowHeight = 100
+    }
+    
     private let appList = App.mockData
     
     // MARK: - Life Cycle
@@ -30,9 +36,6 @@ class TableViewController: UIViewController {
     
     private func setStyle() {
         view.backgroundColor = .white
-        tableView.backgroundColor = .white
-        tableView.separatorStyle = .singleLine
-        tableView.rowHeight = 100
     }
     
     private func setUI() {

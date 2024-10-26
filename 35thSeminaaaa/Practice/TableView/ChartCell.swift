@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Then
 
 class ChartCell: UITableViewCell {
     
@@ -14,50 +15,38 @@ class ChartCell: UITableViewCell {
     
     static let identifier = "ChartCell"
     
-    private let iconImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        imageView.layer.cornerRadius = 16
-        imageView.clipsToBounds = true
-        return imageView
-    }()
+    private let iconImageView = UIImageView().then {
+        $0.contentMode = .scaleAspectFit
+        $0.layer.cornerRadius = 16
+        $0.clipsToBounds = true
+    }
     
-    private let rankingLabel: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 16, weight: .bold)
-        label.textColor = .black
-        return label
-    }()
+    private let rankingLabel = UILabel().then {
+        $0.font = .systemFont(ofSize: 16, weight: .bold)
+        $0.textColor = .black
+    }
     
-    private let titleLabel: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 16, weight: .semibold)
-        label.textColor = .black
-        return label
-    }()
+    private let titleLabel = UILabel().then {
+        $0.font = .systemFont(ofSize: 16, weight: .semibold)
+        $0.textColor = .black
+    }
     
-    private let subTitleLabel: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 14)
-        label.textColor = .gray
-        return label
-    }()
+    private let subTitleLabel = UILabel().then {
+        $0.font = .systemFont(ofSize: 14)
+        $0.textColor = .gray
+    }
     
-    private let downloadButton: UIButton = {
-        let button = UIButton()
-        button.layer.cornerRadius = 12
-        button.backgroundColor = .systemBlue
-        button.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
-        return button
-    }()
+    private let downloadButton = UIButton().then {
+        $0.layer.cornerRadius = 12
+        $0.backgroundColor = .systemBlue
+        $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
+    }
     
-    private let verticalStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.spacing = 4
-        stackView.alignment = .leading
-        return stackView
-    }()
+    private let verticalStackView = UIStackView().then {
+        $0.axis = .vertical
+        $0.spacing = 4
+        $0.alignment = .leading
+    }
     
     // MARK: - Initialization
     
