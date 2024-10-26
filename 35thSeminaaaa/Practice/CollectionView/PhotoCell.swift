@@ -21,15 +21,18 @@ class PhotoCell: UICollectionViewCell {
     private let photoImageView = UIImageView().then {
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
+        $0.backgroundColor = .systemGray6
     }
     
-    private let likeButton = UIButton().then {
-        $0.setImage(UIImage(systemName: "heart"), for: .normal)
-        $0.tintColor = .white
-        $0.addTarget(PhotoCell.self, action: #selector(likeButtonTapped), for: .touchUpInside)
+    private lazy var likeButton = UIButton().then {
+        $0.setImage(UIImage(systemName: "heart")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        $0.tintColor = .systemRed
+        $0.backgroundColor = .white.withAlphaComponent(0.7)
+        $0.layer.cornerRadius = 15
+        $0.imageView?.contentMode = .scaleAspectFit
+        $0.addTarget(self, action: #selector(didTapLikeButton), for: .touchUpInside)
     }
     
-    // MARK: - Initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUI()
@@ -40,9 +43,9 @@ class PhotoCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - UI Setup
     private func setUI() {
-        [photoImageView, likeButton].forEach { addSubview($0) }
+        [photoImageView, likeButton].forEach { contentView.addSubview($0) }
+        backgroundColor = .clear
     }
     
     private func setLayout() {
@@ -52,20 +55,32 @@ class PhotoCell: UICollectionViewCell {
         
         likeButton.snp.makeConstraints {
             $0.trailing.bottom.equalToSuperview().inset(8)
-            $0.size.equalTo(20)
+            $0.size.equalTo(30)
         }
     }
     
-    // MARK: - Methods
-    @objc
-    private func likeButtonTapped() {
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        photoImageView.image = nil
+        isLiked = false
+    }
+    
+    @objc private func didTapLikeButton() {  
         isLiked.toggle()
         likeButtonAction?()
+        
+        UIView.animate(withDuration: 0.1, animations: {
+            self.likeButton.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        }) { _ in
+            UIView.animate(withDuration: 0.1) {
+                self.likeButton.transform = .identity
+            }
+        }
     }
     
     private func updateUI() {
-        let image = isLiked ? "heart.fill" : "heart"
-        likeButton.setImage(UIImage(systemName: image), for: .normal)
+        let imageName = isLiked ? "heart.fill" : "heart"
+        likeButton.setImage(UIImage(systemName: imageName)?.withRenderingMode(.alwaysTemplate), for: .normal)
     }
     
     func bind(_ photo: Photo) {

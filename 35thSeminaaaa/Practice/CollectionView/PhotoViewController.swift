@@ -11,32 +11,36 @@ import SnapKit
 
 class PhotoViewController: UIViewController {
     
+    
     private var photoList = Photo.mockData
+    
     private lazy var collectionView = UICollectionView(
         frame: .zero,
-        collectionViewLayout: UICollectionViewFlowLayout()
+        collectionViewLayout: createLayout()
     ).then {
-        let flowLayout = UICollectionViewFlowLayout()
-        let itemSize = (UIScreen.main.bounds.width - 6) / 3
-        flowLayout.itemSize = CGSize(width: itemSize, height: itemSize)
-        flowLayout.minimumLineSpacing = 3
-        flowLayout.minimumInteritemSpacing = 3
-        
         $0.backgroundColor = .white
-        $0.setCollectionViewLayout(flowLayout, animated: false)
         $0.register(PhotoCell.self, forCellWithReuseIdentifier: PhotoCell.identifier)
         $0.delegate = self
         $0.dataSource = self
     }
     
-    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
         setLayout()
     }
     
-    // MARK: - UI Setup
+    
+    private func createLayout() -> UICollectionViewLayout {
+        let flowLayout = UICollectionViewFlowLayout()
+        let itemSize = (UIScreen.main.bounds.width - 6) / 3
+        flowLayout.itemSize = CGSize(width: itemSize, height: itemSize)
+        flowLayout.minimumLineSpacing = 3
+        flowLayout.minimumInteritemSpacing = 3
+        return flowLayout
+    }
+    
     private func setUI() {
         view.backgroundColor = .white
         view.addSubview(collectionView)
@@ -50,14 +54,11 @@ class PhotoViewController: UIViewController {
     }
 }
 
-// MARK: - UICollectionViewDelegate
 extension PhotoViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // Handle cell selection if needed
     }
 }
 
-// MARK: - UICollectionViewDataSource
 extension PhotoViewController: UICollectionViewDataSource {
     func collectionView(
         _ collectionView: UICollectionView,
