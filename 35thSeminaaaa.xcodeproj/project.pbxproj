@@ -15,6 +15,16 @@
 		782E8C592CCCC6FA00C8CB15 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E8C582CCCC6FA00C8CB15 /* PhotoViewController.swift */; };
 		782E8C5B2CCCC76900C8CB15 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E8C5A2CCCC76900C8CB15 /* PhotoModel.swift */; };
 		782E8C5D2CCCC78700C8CB15 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E8C5C2CCCC78700C8CB15 /* PhotoCell.swift */; };
+		786131F12CD5F0D6005DB05A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 786131F02CD5F0D6005DB05A /* Alamofire */; };
+		786131F42CD5F379005DB05A /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786131F32CD5F379005DB05A /* Environment.swift */; };
+		786131F62CD5F3CF005DB05A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786131F52CD5F3CF005DB05A /* NetworkError.swift */; };
+		786131F82CD5FEFB005DB05A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786131F72CD5FEFB005DB05A /* UserService.swift */; };
+		786131FA2CD5FF92005DB05A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786131F92CD5FF92005DB05A /* LoginViewController.swift */; };
+		786131FD2CD6044E005DB05A /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786131FC2CD6044E005DB05A /* LoginResponse.swift */; };
+		786131FF2CD6046C005DB05A /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786131FE2CD6046C005DB05A /* RegisterResponse.swift */; };
+		786132012CD6047F005DB05A /* HobbyRespose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786132002CD6047F005DB05A /* HobbyRespose.swift */; };
+		786132032CD60493005DB05A /* UpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786132022CD60493005DB05A /* UpdateRequest.swift */; };
+		786132052CD6055D005DB05A /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786132042CD6055D005DB05A /* mainViewController.swift */; };
 		78E6CF3B2CBA5C53001CEDCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E6CF3A2CBA5C53001CEDCE /* AppDelegate.swift */; };
 		78E6CF442CBA5C54001CEDCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E6CF432CBA5C54001CEDCE /* Assets.xcassets */; };
 		78E6CF472CBA5C54001CEDCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E6CF452CBA5C54001CEDCE /* LaunchScreen.storyboard */; };
@@ -33,6 +43,16 @@
 		782E8C582CCCC6FA00C8CB15 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		782E8C5A2CCCC76900C8CB15 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		782E8C5C2CCCC78700C8CB15 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		786131F22CD5F26B005DB05A /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		786131F32CD5F379005DB05A /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		786131F52CD5F3CF005DB05A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		786131F72CD5FEFB005DB05A /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		786131F92CD5FF92005DB05A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		786131FC2CD6044E005DB05A /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		786131FE2CD6046C005DB05A /* RegisterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
+		786132002CD6047F005DB05A /* HobbyRespose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbyRespose.swift; sourceTree = "<group>"; };
+		786132022CD60493005DB05A /* UpdateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRequest.swift; sourceTree = "<group>"; };
+		786132042CD6055D005DB05A /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		78E6CF372CBA5C53001CEDCE /* 35thSeminaaaa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 35thSeminaaaa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E6CF3A2CBA5C53001CEDCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78E6CF432CBA5C54001CEDCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				786131F12CD5F0D6005DB05A /* Alamofire in Frameworks */,
 				78E6CF572CBA5D5D001CEDCE /* SnapKit in Frameworks */,
 				78E6CF5C2CBA5EAE001CEDCE /* Then in Frameworks */,
 			);
@@ -55,11 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		782E8C4F2CCCB50A00C8CB15 /* New Group */ = {
+		782E8C4F2CCCB50A00C8CB15 /* 4thSemina */ = {
 			isa = PBXGroup;
 			children = (
+				786131FB2CD6043A005DB05A /* DTO */,
+				786131F72CD5FEFB005DB05A /* UserService.swift */,
+				786131F92CD5FF92005DB05A /* LoginViewController.swift */,
+				786132042CD6055D005DB05A /* mainViewController.swift */,
 			);
-			path = "New Group";
+			path = 4thSemina;
 			sourceTree = "<group>";
 		};
 		782E8C562CCCB61D00C8CB15 /* TableView */ = {
@@ -82,6 +107,17 @@
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
+		786131FB2CD6043A005DB05A /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				786131FC2CD6044E005DB05A /* LoginResponse.swift */,
+				786131FE2CD6046C005DB05A /* RegisterResponse.swift */,
+				786132002CD6047F005DB05A /* HobbyRespose.swift */,
+				786132022CD60493005DB05A /* UpdateRequest.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
 		78E6CF2E2CBA5C53001CEDCE = {
 			isa = PBXGroup;
 			children = (
@@ -101,7 +137,7 @@
 		78E6CF392CBA5C53001CEDCE /* 35thSeminaaaa */ = {
 			isa = PBXGroup;
 			children = (
-				782E8C4F2CCCB50A00C8CB15 /* New Group */,
+				782E8C4F2CCCB50A00C8CB15 /* 4thSemina */,
 				78E6CF5D2CBA5EC3001CEDCE /* Practice */,
 				78E6CF542CBA5D44001CEDCE /* assignment */,
 				78E6CF3A2CBA5C53001CEDCE /* AppDelegate.swift */,
@@ -110,6 +146,9 @@
 				78E6CF432CBA5C54001CEDCE /* Assets.xcassets */,
 				78E6CF452CBA5C54001CEDCE /* LaunchScreen.storyboard */,
 				78E6CF482CBA5C54001CEDCE /* Info.plist */,
+				786131F22CD5F26B005DB05A /* Config.xcconfig */,
+				786131F32CD5F379005DB05A /* Environment.swift */,
+				786131F52CD5F3CF005DB05A /* NetworkError.swift */,
 			);
 			path = 35thSeminaaaa;
 			sourceTree = "<group>";
@@ -151,6 +190,7 @@
 			packageProductDependencies = (
 				78E6CF562CBA5D5D001CEDCE /* SnapKit */,
 				78E6CF5B2CBA5EAE001CEDCE /* Then */,
+				786131F02CD5F0D6005DB05A /* Alamofire */,
 			);
 			productName = 35thSeminaaaa;
 			productReference = 78E6CF372CBA5C53001CEDCE /* 35thSeminaaaa.app */;
@@ -183,6 +223,7 @@
 			packageReferences = (
 				78E6CF552CBA5D5D001CEDCE /* XCRemoteSwiftPackageReference "SnapKit" */,
 				78E6CF5A2CBA5EAE001CEDCE /* XCRemoteSwiftPackageReference "Then" */,
+				786131EF2CD5F0D6005DB05A /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 78E6CF382CBA5C53001CEDCE /* Products */;
 			projectDirPath = "";
@@ -210,17 +251,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				786131F82CD5FEFB005DB05A /* UserService.swift in Sources */,
 				782E8C592CCCC6FA00C8CB15 /* PhotoViewController.swift in Sources */,
+				786131F42CD5F379005DB05A /* Environment.swift in Sources */,
 				78E6CF3B2CBA5C53001CEDCE /* AppDelegate.swift in Sources */,
 				782E8C552CCCB60D00C8CB15 /* tableviewApp.swift in Sources */,
 				782E8C4C2CCCAF0100C8CB15 /* ViewController.swift in Sources */,
+				786131FD2CD6044E005DB05A /* LoginResponse.swift in Sources */,
+				786132052CD6055D005DB05A /* mainViewController.swift in Sources */,
 				78E6CF592CBA5E1C001CEDCE /* TossViewcontroller.swift in Sources */,
 				78E6CF532CBA5D13001CEDCE /* DetailViewController.swift in Sources */,
 				782E8C532CCCB5C500C8CB15 /* tableViewController.swift in Sources */,
+				786132012CD6047F005DB05A /* HobbyRespose.swift in Sources */,
 				782E8C4E2CCCAF0900C8CB15 /* SceneDelegate.swift in Sources */,
+				786132032CD60493005DB05A /* UpdateRequest.swift in Sources */,
 				782E8C5B2CCCC76900C8CB15 /* PhotoModel.swift in Sources */,
+				786131F62CD5F3CF005DB05A /* NetworkError.swift in Sources */,
 				782E8C5D2CCCC78700C8CB15 /* PhotoCell.swift in Sources */,
+				786131FA2CD5FF92005DB05A /* LoginViewController.swift in Sources */,
 				782E8C512CCCB51900C8CB15 /* ChartCell.swift in Sources */,
+				786131FF2CD6046C005DB05A /* RegisterResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +409,7 @@
 		};
 		78E6CF4C2CBA5C54001CEDCE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 786131F22CD5F26B005DB05A /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -386,6 +437,7 @@
 		};
 		78E6CF4D2CBA5C54001CEDCE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 786131F22CD5F26B005DB05A /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -435,6 +487,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		786131EF2CD5F0D6005DB05A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.1;
+			};
+		};
 		78E6CF552CBA5D5D001CEDCE /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -454,6 +514,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		786131F02CD5F0D6005DB05A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 786131EF2CD5F0D6005DB05A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		78E6CF562CBA5D5D001CEDCE /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 78E6CF552CBA5D5D001CEDCE /* XCRemoteSwiftPackageReference "SnapKit" */;
