@@ -15,6 +15,7 @@
 		782E8C592CCCC6FA00C8CB15 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E8C582CCCC6FA00C8CB15 /* PhotoViewController.swift */; };
 		782E8C5B2CCCC76900C8CB15 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E8C5A2CCCC76900C8CB15 /* PhotoModel.swift */; };
 		782E8C5D2CCCC78700C8CB15 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E8C5C2CCCC78700C8CB15 /* PhotoCell.swift */; };
+		78439EB52CF6D3CB00604BFB /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78439EB42CF6D3CB00604BFB /* SwiftUIView.swift */; };
 		786131F12CD5F0D6005DB05A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 786131F02CD5F0D6005DB05A /* Alamofire */; };
 		786131F42CD5F379005DB05A /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786131F32CD5F379005DB05A /* Environment.swift */; };
 		786131F62CD5F3CF005DB05A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786131F52CD5F3CF005DB05A /* NetworkError.swift */; };
@@ -43,6 +44,7 @@
 		782E8C582CCCC6FA00C8CB15 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		782E8C5A2CCCC76900C8CB15 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		782E8C5C2CCCC78700C8CB15 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		78439EB42CF6D3CB00604BFB /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		786131F22CD5F26B005DB05A /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		786131F32CD5F379005DB05A /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		786131F52CD5F3CF005DB05A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -107,6 +109,14 @@
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
+		78439EB32CF6D3A700604BFB /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				78439EB42CF6D3CB00604BFB /* SwiftUIView.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
 		786131FB2CD6043A005DB05A /* DTO */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +147,7 @@
 		78E6CF392CBA5C53001CEDCE /* 35thSeminaaaa */ = {
 			isa = PBXGroup;
 			children = (
+				78439EB32CF6D3A700604BFB /* SwiftUI */,
 				782E8C4F2CCCB50A00C8CB15 /* 4thSemina */,
 				78E6CF5D2CBA5EC3001CEDCE /* Practice */,
 				78E6CF542CBA5D44001CEDCE /* assignment */,
@@ -259,6 +270,7 @@
 				782E8C4C2CCCAF0100C8CB15 /* ViewController.swift in Sources */,
 				786131FD2CD6044E005DB05A /* LoginResponse.swift in Sources */,
 				786132052CD6055D005DB05A /* mainViewController.swift in Sources */,
+				78439EB52CF6D3CB00604BFB /* SwiftUIView.swift in Sources */,
 				78E6CF592CBA5E1C001CEDCE /* TossViewcontroller.swift in Sources */,
 				78E6CF532CBA5D13001CEDCE /* DetailViewController.swift in Sources */,
 				782E8C532CCCB5C500C8CB15 /* tableViewController.swift in Sources */,
