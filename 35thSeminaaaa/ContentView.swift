@@ -7,46 +7,43 @@
 
 import SwiftUI
 
-
-
 struct ContentView: View {
-    // 현재 선택된 탭을 추적하기 위한 상태 변수
     @State private var selectedTab = 0
     
     var body: some View {
         TabView(selection: $selectedTab) {
             TodayView()
                 .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("홈")
+                    Image(systemName: "book.pages")
+                    Text("투데이")
                 }
                 .tag(0)
             
             GameView()
                 .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("검색")
+                    Image(systemName: "gamecontroller")
+                    Text("게임")
                 }
                 .tag(1)
             
             AppView()
                 .tabItem {
-                    Image(systemName: "plus.square")
-                    Text("게시물")
+                    Image(systemName: "square.stack.3d.up")
+                    Text("앱")
                 }
                 .tag(2)
             
             ArcadeView()
                 .tabItem {
-                    Image(systemName: "bell.fill")
-                    Text("알림")
+                    Image(systemName: "arcade.stick.console")
+                    Text("Arcade")
                 }
                 .tag(3)
             
             SearchView()
                 .tabItem {
-                    Image(systemName: "person.fill")
-                    Text("프로필")
+                    Image(systemName: "magnifyingglass")
+                    Text("검색")
                 }
                 .tag(4)
         }
