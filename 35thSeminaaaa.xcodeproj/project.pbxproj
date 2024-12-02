@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,14 @@
 		78E6CF462CBA5C54001CEDCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78E6CF482CBA5C54001CEDCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		789963752CFD87E700342E62 /* GameView */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = GameView; sourceTree = "<group>"; };
+		789963762CFD87F300342E62 /* TodayView */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = TodayView; sourceTree = "<group>"; };
+		789963772CFD87FF00342E62 /* AppView */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = AppView; sourceTree = "<group>"; };
+		789963782CFD880500342E62 /* ArcadeView */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ArcadeView; sourceTree = "<group>"; };
+		789963792CFD881000342E62 /* SearchView */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SearchView; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		78E6CF342CBA5C53001CEDCE /* Frameworks */ = {
@@ -54,6 +62,11 @@
 		78E6CF392CBA5C53001CEDCE /* 35thSeminaaaa */ = {
 			isa = PBXGroup;
 			children = (
+				789963792CFD881000342E62 /* SearchView */,
+				789963782CFD880500342E62 /* ArcadeView */,
+				789963772CFD87FF00342E62 /* AppView */,
+				789963762CFD87F300342E62 /* TodayView */,
+				789963752CFD87E700342E62 /* GameView */,
 				78E6CF3A2CBA5C53001CEDCE /* AndSoptSemina.swift */,
 				789962C12CFD78AB00342E62 /* ContentView.swift */,
 				78E6CF432CBA5C54001CEDCE /* Assets.xcassets */,
@@ -77,6 +90,13 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				789963752CFD87E700342E62 /* GameView */,
+				789963762CFD87F300342E62 /* TodayView */,
+				789963772CFD87FF00342E62 /* AppView */,
+				789963782CFD880500342E62 /* ArcadeView */,
+				789963792CFD881000342E62 /* SearchView */,
 			);
 			name = 35thSeminaaaa;
 			packageProductDependencies = (
