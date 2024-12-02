@@ -32,7 +32,6 @@ struct PromoCardView: View {
             }
             .padding(.top, 8)
         }
-        .padding(20)
         .frame(width: 300, height: 200)
         .background(Color.blue.opacity(0.1))
         .cornerRadius(12)

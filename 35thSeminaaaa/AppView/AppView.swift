@@ -14,17 +14,14 @@ struct AppView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 categorySection
-                
                 promotionSection
-                
                 appListSection
             }
+            .padding(.horizontal, 20) 
         }
         .navigationBarItems(trailing: profileButton)
     }
-    
-    // MARK: - View Components
-    
+        
     private var categorySection: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 15) {
