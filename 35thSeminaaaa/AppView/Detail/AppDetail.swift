@@ -13,7 +13,6 @@ struct AppDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
-                // 앱 헤더 정보
                 HStack(spacing: 16) {
                     Image(app.iconName)
                         .resizable()

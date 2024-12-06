@@ -9,19 +9,42 @@ import SwiftUI
 
 struct AppView: View {
     @StateObject private var viewModel = AppViewModel()
+    @State private var scrollOffset: CGFloat = 0
     
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
-                categorySection
-                promotionSection
-                appListSection
+            NavigationView {
+                ScrollView {
+                    ScrollViewReader { proxy in
+                        VStack(alignment: .leading, spacing: 20) {
+                            GeometryReader { geo in
+                                Color.clear.preference(
+                                    key: OffsetPreferenceKey.self,
+                                    value: geo.frame(in: .named("scroll")).minY
+                                )
+                            }
+                            .frame(height: 0)
+                            
+                            categorySection
+                            promotionSection
+                            appListSection
+                        }
+                        .padding(.horizontal, 20)
+                    }
+                }
+                .coordinateSpace(name: "scroll")
+                .onPreferenceChange(OffsetPreferenceKey.self) { value in
+                    scrollOffset = value
+                }
+                .navigationBarTitleDisplayMode(scrollOffset > -30 ? .large : .inline)
+                .navigationTitle("앱")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        profileButton
+                    }
+                }
             }
-            .padding(.horizontal, 20) 
         }
-        .navigationBarItems(trailing: profileButton)
-    }
-        
+    
     private var categorySection: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 15) {
@@ -83,9 +106,19 @@ struct AppView: View {
                 .foregroundColor(.primary)
         }
     }
+    
+    
 }
+
 #Preview {
     NavigationView {
-        AppView()
+        ContentView()
+    }
+}
+
+struct OffsetPreferenceKey: PreferenceKey {
+    static var defaultValue: CGFloat = 0
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value = nextValue()
     }
 }
