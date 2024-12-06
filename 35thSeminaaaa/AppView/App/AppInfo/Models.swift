@@ -29,14 +29,14 @@ struct PromotionBanner: Identifiable {
 
 extension CategoryItem {
     static let sampleCategories: [CategoryItem] = [
-        CategoryItem(title: "이번 주", icon: "calendar"),
-        CategoryItem(title: "AR", icon: "arkit"),
-        CategoryItem(title: "교육", icon: "book.fill"),
-        CategoryItem(title: "엔터테인먼트", icon: "tv.fill"),
-        CategoryItem(title: "음식", icon: "fork.knife"),
-        CategoryItem(title: "게임", icon: "gamecontroller.fill"),
-        CategoryItem(title: "건강", icon: "heart.fill"),
-        CategoryItem(title: "라이프스타일", icon: "figure.walk")
+        CategoryItem(title: "엔터테인먼트", icon: "calendar"),
+        CategoryItem(title: "소셜 네트워킹", icon: "arkit"),
+        CategoryItem(title: "사진 및 비디오", icon: "book.fill"),
+        CategoryItem(title: "생산성", icon: "tv.fill"),
+        CategoryItem(title: "라이프스타일", icon: "fork.knife"),
+        CategoryItem(title: "쇼핑", icon: "gamecontroller.fill"),
+        CategoryItem(title: "그뮹", icon: "heart.fill"),
+        CategoryItem(title: "개발자도구", icon: "figure.walk")
     ]
 }
 

@@ -12,6 +12,7 @@ struct AppView: View {
     @State private var scrollOffset: CGFloat = 0
     
     var body: some View {
+        
         NavigationView {
             ScrollView {
                 ScrollViewReader { proxy in
@@ -25,7 +26,6 @@ struct AppView: View {
                         .frame(height: 0)
                         
                         categorySection
-                        promotionSection
                         promotionSection
                         appListSection
                     }
@@ -52,16 +52,24 @@ struct AppView: View {
                             .font(.system(size: 12))
                         
                         Text(category.title)
-                            .font(.system(size: 14)) 
+                            .font(.system(size: 14))
                     }
                     .padding(.horizontal, 16)
                     .padding(.vertical, 8)
-                    .background(Color.gray.opacity(0.1))
-                    .cornerRadius(20)
+                    .background(Color.white)
+                    .cornerRadius(12)
+                    .shadow(
+                        color: Color.black.opacity(0.1),
+                        radius: 4,
+                        x: 0,
+                        y: 2
+                    )
                 }
             }
             .padding(.horizontal)
+            .padding(.vertical, 4)
         }
+        .padding(.vertical, 4)
     }
     
     private var promotionSection: some View {
@@ -107,7 +115,7 @@ struct AppView: View {
 
 #Preview {
     NavigationView {
-        ContentView()
+        AppView()
     }
 }
 
