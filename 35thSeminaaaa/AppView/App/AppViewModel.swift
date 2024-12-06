@@ -7,9 +7,9 @@
 
 import SwiftUI
 
+
 class AppViewModel: ObservableObject {
-    let categories = ["엔터테인먼트", "소셜 네트워킹", "사진 및 비디오"]
-    
+    @Published var categories: [CategoryItem] = []
     @Published var recommendedApps: [AppInfo] = []
     @Published var promotions: [PromotionBanner] = []
     
@@ -18,6 +18,7 @@ class AppViewModel: ObservableObject {
     }
     
     private func loadData() {
+        categories = CategoryItem.sampleCategories    
         recommendedApps = AppInfo.sampleRecommendedApps
         promotions = PromotionBanner.samplePromotions
     }

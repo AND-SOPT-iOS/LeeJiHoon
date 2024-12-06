@@ -12,48 +12,52 @@ struct AppView: View {
     @State private var scrollOffset: CGFloat = 0
     
     var body: some View {
-            NavigationView {
-                ScrollView {
-                    ScrollViewReader { proxy in
-                        VStack(alignment: .leading, spacing: 20) {
-                            GeometryReader { geo in
-                                Color.clear.preference(
-                                    key: OffsetPreferenceKey.self,
-                                    value: geo.frame(in: .named("scroll")).minY
-                                )
-                            }
-                            .frame(height: 0)
-                            
-                            categorySection
-                            promotionSection
-                            appListSection
+        NavigationView {
+            ScrollView {
+                ScrollViewReader { proxy in
+                    VStack(alignment: .leading, spacing: 20) {
+                        GeometryReader { geo in
+                            Color.clear.preference(
+                                key: OffsetPreferenceKey.self,
+                                value: geo.frame(in: .named("scroll")).minY
+                            )
                         }
-                        .padding(.horizontal, 20)
+                        .frame(height: 0)
+                        
+                        categorySection
+                        promotionSection
+                        promotionSection
+                        appListSection
                     }
-                }
-                .coordinateSpace(name: "scroll")
-                .onPreferenceChange(OffsetPreferenceKey.self) { value in
-                    scrollOffset = value
-                }
-                .navigationBarTitleDisplayMode(scrollOffset > -30 ? .large : .inline)
-                .navigationTitle("앱")
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        profileButton
-                    }
+                    .padding(.horizontal, 20)
                 }
             }
+            .onPreferenceChange(OffsetPreferenceKey.self) { value in
+                withAnimation(.easeInOut) {
+                    scrollOffset = value
+                }
+            }
+            .navigationBarTitleDisplayMode(scrollOffset > -30 ? .large : .inline)
+            .navigationTitle("앱")
+
         }
+    }
     
     private var categorySection: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 15) {
-                ForEach(viewModel.categories, id: \.self) { category in
-                    Text(category)
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 8)
-                        .background(Color.gray.opacity(0.1))
-                        .cornerRadius(20)
+                ForEach(viewModel.categories) { category in
+                    HStack(spacing: 6) {
+                        Image(systemName: category.icon)
+                            .font(.system(size: 12))
+                        
+                        Text(category.title)
+                            .font(.system(size: 14)) 
+                    }
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 8)
+                    .background(Color.gray.opacity(0.1))
+                    .cornerRadius(20)
                 }
             }
             .padding(.horizontal)
@@ -99,15 +103,6 @@ struct AppView: View {
             }
         }
     }
-    
-    private var profileButton: some View {
-        Button(action: {}) {
-            Image(systemName: "person.circle")
-                .foregroundColor(.primary)
-        }
-    }
-    
-    
 }
 
 #Preview {

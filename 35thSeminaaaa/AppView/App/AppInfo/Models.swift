@@ -7,6 +7,12 @@
 
 import Foundation
 
+struct CategoryItem: Identifiable, Hashable {
+    let id = UUID()
+    let title: String
+    let icon: String
+}
+
 struct AppInfo: Identifiable {
     let id = UUID()
     let name: String
@@ -19,6 +25,19 @@ struct PromotionBanner: Identifiable {
     let title: String
     let subtitle: String
     let imageName: String
+}
+
+extension CategoryItem {
+    static let sampleCategories: [CategoryItem] = [
+        CategoryItem(title: "이번 주", icon: "calendar"),
+        CategoryItem(title: "AR", icon: "arkit"),
+        CategoryItem(title: "교육", icon: "book.fill"),
+        CategoryItem(title: "엔터테인먼트", icon: "tv.fill"),
+        CategoryItem(title: "음식", icon: "fork.knife"),
+        CategoryItem(title: "게임", icon: "gamecontroller.fill"),
+        CategoryItem(title: "건강", icon: "heart.fill"),
+        CategoryItem(title: "라이프스타일", icon: "figure.walk")
+    ]
 }
 
 extension AppInfo {
