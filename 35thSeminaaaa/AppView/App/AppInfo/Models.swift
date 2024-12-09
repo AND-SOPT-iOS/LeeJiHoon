@@ -21,12 +21,14 @@ struct AppInfo: Identifiable {
 }
 
 struct PromotionBanner: Identifiable {
-    let id = UUID()
-    let title: String
-    let subtitle: String
-    let imageName: String
+    let id: Int
+    let headerTitle: String
+    let mainTitle: String
+    let subTitle: String
+    let image: String
+    let appIconName: String
+    let description: String
 }
-
 extension CategoryItem {
     static let sampleCategories: [CategoryItem] = [
         CategoryItem(title: "엔터테인먼트", icon: "calendar"),
@@ -69,15 +71,40 @@ extension AppInfo {
 extension PromotionBanner {
     static let samplePromotions: [PromotionBanner] = [
         PromotionBanner(
-            title: "카카오페이",
-            subtitle: "간편하게 결제하고, 특별한 혜택을 챙기세요",
-            imageName: "kakao.promo"
-        )
+            id: 1,
+            headerTitle: "지금 이용 가능",
+            mainTitle: "TVING",
+            subTitle: "핀란드 셋방살이",
+            image: "AppNowExam",
+            appIconName: "toss",
+            description: "즐겨움을 스트리밍하세요"
+        ),
+        PromotionBanner(
+            id: 2,
+            headerTitle: "지금 이용 가능",
+            mainTitle: "TVING",
+            subTitle: "핀란드 셋방살이",
+            image: "AppNowExam",
+            appIconName: "toss",
+            description: "즐겨움을 스트리밍하세요"
+        ),
+        PromotionBanner(
+            id: 3,
+            headerTitle: "지금 이용 가능",
+            mainTitle: "TVING",
+            subTitle: "핀란드 셋방살이",
+            image: "AppNowExam",
+            appIconName: "toss",
+            description: "즐겨움을 스트리밍하세요"
+        ),
+        PromotionBanner(
+            id: 4,
+            headerTitle: "지금 이용 가능",
+            mainTitle: "TVING",
+            subTitle: "핀란드 셋방살이",
+            image: "AppNowExam",
+            appIconName: "toss",
+            description: "즐겨움을 스트리밍하세요"
+        ),
     ]
-    
-    static let samplePromotion = PromotionBanner(
-        title: "카카오페이",
-        subtitle: "간편하게 결제하고, 특별한 혜택을 챙기세요",
-        imageName: "kakao.promo"
-    )
 }

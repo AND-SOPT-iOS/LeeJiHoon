@@ -17,19 +17,12 @@ struct AppView: View {
             ScrollView {
                 ScrollViewReader { proxy in
                     VStack(alignment: .leading, spacing: 20) {
-                        GeometryReader { geo in
-                            Color.clear.preference(
-                                key: OffsetPreferenceKey.self,
-                                value: geo.frame(in: .named("scroll")).minY
-                            )
-                        }
-                        .frame(height: 0)
-                        
                         categorySection
-                        PromotionSection()
+                        PromotionSection(promotions: viewModel.promotions)
+                            .padding(.top, 8)
                         appListSection
                     }
-                    .padding(.horizontal, 20)
+                    .padding(.horizontal, 0)
                 }
             }
             .onPreferenceChange(OffsetPreferenceKey.self) { value in
