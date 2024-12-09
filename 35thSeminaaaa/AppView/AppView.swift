@@ -26,7 +26,7 @@ struct AppView: View {
                         .frame(height: 0)
                         
                         categorySection
-                        promotionSection
+                        PromotionSection()
                         appListSection
                     }
                     .padding(.horizontal, 20)
@@ -70,23 +70,6 @@ struct AppView: View {
             .padding(.vertical, 4)
         }
         .padding(.vertical, 4)
-    }
-    
-    private var promotionSection: some View {
-        VStack(alignment: .leading) {
-            Text("현재 진행 중")
-                .font(.subheadline)
-                .foregroundColor(.gray)
-            
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 15) {
-                    ForEach(viewModel.promotions) { promo in
-                        PromoCardView(promotion: promo)
-                    }
-                }
-                .padding(.horizontal)
-            }
-        }
     }
     
     private var appListSection: some View {
