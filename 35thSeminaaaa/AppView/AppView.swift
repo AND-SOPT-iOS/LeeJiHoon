@@ -20,6 +20,9 @@ struct AppView: View {
                         categorySection
                         PromotionSection(promotions: viewModel.promotions)
                             .padding(.top, 8)
+                        Divider()
+                            .padding(.horizontal, 16)
+
                         appListSection
                     }
                     .padding(.horizontal, 0)
@@ -66,27 +69,32 @@ struct AppView: View {
     }
     
     private var appListSection: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Text("iPhone 필수 앱")
-                    .font(.title2)
-                    .bold()
-                Spacer()
-                Button("모두 보기") {
-                }
-                .foregroundColor(.blue)
-            }
-            .padding(.horizontal)
+        VStack(alignment: .leading, spacing: 20) {
             
-            VStack(spacing: 0) {
-                ForEach(viewModel.recommendedApps) { app in
-                    AppRowView(app: app)
-                    Divider()
-                        .padding(.leading, 76)
+            VStack(alignment: .leading, spacing: 4) {
+                SectionHeaderView(title: "iPhone 필수 앱")
+                Text("에디터가 직접 고른 추천 앱으로 시작하세요")
+                    .font(.system(size: 18))
+                    .foregroundColor(.gray)
+                    .padding(.leading, 16)
+                    .padding(.bottom, 8)
+                
+                VStack(spacing: 0) {
+                    ForEach(viewModel.recommendedApps) { app in
+                        AppRowView(app: app)
+                        if app.id != viewModel.recommendedApps.last?.id {
+                            Divider()
+                                .padding(.leading, 76)
+                                .padding(.trailing, 16)
+                        }
+                    }
                 }
             }
+            
         }
+        .padding(.top, 20)
     }
+
 }
 
 #Preview {

@@ -18,6 +18,8 @@ struct AppInfo: Identifiable {
     let name: String
     let description: String
     let iconName: String
+    let category: String
+    let rating: Double
 }
 
 struct PromotionBanner: Identifiable {
@@ -29,6 +31,7 @@ struct PromotionBanner: Identifiable {
     let appIconName: String
     let description: String
 }
+
 extension CategoryItem {
     static let sampleCategories: [CategoryItem] = [
         CategoryItem(title: "엔터테인먼트", icon: "calendar"),
@@ -47,25 +50,25 @@ extension AppInfo {
         AppInfo(
             name: "토스",
             description: "금융이 쉬워진다",
-            iconName: "toss.icon"
+            iconName: "toss",
+            category: "금융",
+            rating: 4.8
         ),
         AppInfo(
             name: "네이버페이",
             description: "결제·포인트·대출·보험·카드·증권·부동산까지 하나로",
-            iconName: "naverpay.icon"
+            iconName: "toss",
+            category: "금융",
+            rating: 4.7
         ),
         AppInfo(
             name: "카카오페이",
             description: "금융의 다른 길",
-            iconName: "kakaopay.icon"
+            iconName: "toss",
+            category: "금융",
+            rating: 4.6
         )
     ]
-    
-    static let sampleApp = AppInfo(
-        name: "토스",
-        description: "금융이 쉬워진다",
-        iconName: "toss.icon"
-    )
 }
 
 extension PromotionBanner {
