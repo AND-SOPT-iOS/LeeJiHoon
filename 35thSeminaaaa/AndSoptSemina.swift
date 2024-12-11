@@ -10,20 +10,27 @@ import SwiftUI
 @main
 struct AndSoptSemina: App {
     init() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithDefaultBackground()
+        let standardAppearance = UINavigationBarAppearance()
+        standardAppearance.configureWithDefaultBackground()
         
         let scrollEdgeAppearance = UINavigationBarAppearance()
-        scrollEdgeAppearance.configureWithTransparentBackground()
+        scrollEdgeAppearance.configureWithTransparentBackground() 
         
-        UINavigationBar.appearance().standardAppearance = appearance
-        UINavigationBar.appearance().compactAppearance = appearance
+        UINavigationBar.appearance().standardAppearance = standardAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = scrollEdgeAppearance
     }
     
     var body: some Scene {
         WindowGroup {
-            AppView()
+            ContentView()
         }
     }
+}
+struct NavControllerView: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> UINavigationController {
+        let navigationController = UINavigationController(rootViewController: UIViewController())
+        return navigationController
+    }
+    
+    func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {}
 }
