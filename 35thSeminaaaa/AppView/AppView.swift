@@ -12,37 +12,36 @@ struct AppView: View {
     @State private var scrollOffset: CGFloat = 0
     
     var body: some View {
-            NavigationView {
-                ScrollView {
-                    ScrollViewReader { proxy in
-                        VStack(alignment: .leading, spacing: 20) {
-                            categorySection
-                            PromotionSection(promotions: viewModel.promotions)
-                                .padding(.top, 8)
-                            Divider()
-                                .padding(.horizontal, 16)
-                            appListSection
-                        }
-                        .padding(.horizontal, 0)
+            ScrollView {
+                ScrollViewReader { proxy in
+                    VStack(alignment: .leading, spacing: 20) {
+                        categorySection
+                        PromotionSection(promotions: viewModel.promotions)
+                            .padding(.top, 8)
+                        Divider()
+                            .padding(.horizontal, 16)
+                        appListSection
                     }
+                    .padding(.horizontal, 0)
                 }
-                .background(UIKitNavigationController { nc in
-                    viewModel.showDetailVC = { app in
-                        let detailVC = DetailViewController()
-                        detailVC.configure(with: app)
-                        nc.pushViewController(detailVC, animated: true)
-                    }
-                })
-                .onPreferenceChange(OffsetPreferenceKey.self) { value in
-                    withAnimation(.easeInOut) {
-                        scrollOffset = value
-                    }
-                }
-                .navigationBarTitleDisplayMode(scrollOffset > -30 ? .large : .inline)
-                .navigationTitle("앱")
             }
-            .navigationViewStyle(StackNavigationViewStyle())
+            .navigationBarTitleDisplayMode(.large)
+            .navigationTitle("앱")
+            .background(NavigationConfigurator { nc in
+                viewModel.showDetailVC = { app in
+                    let detailVC = DetailViewController()
+                    detailVC.hidesBottomBarWhenPushed = false
+                    detailVC.configure(with: app)
+                    nc.pushViewController(detailVC, animated: true)
+                }
+            })
+            .onPreferenceChange(OffsetPreferenceKey.self) { value in
+                withAnimation(.easeInOut) {
+                    scrollOffset = value
+                }
+            }
         }
+    
     
     private var categorySection: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -116,21 +115,17 @@ struct OffsetPreferenceKey: PreferenceKey {
     }
 }
 
-struct UIKitNavigationController: UIViewControllerRepresentable {
+struct NavigationConfigurator: UIViewControllerRepresentable {
     let configure: (UINavigationController) -> Void
-    
-    init(_ configure: @escaping (UINavigationController) -> Void) {
-        self.configure = configure
-    }
-    
+
     func makeUIViewController(context: Context) -> UIViewController {
-        let vc = UIViewController()
+        let controller = UIViewController()
         DispatchQueue.main.async {
-            if let nc = vc.navigationController {
+            if let nc = controller.navigationController {
                 configure(nc)
             }
         }
-        return vc
+        return controller
     }
     
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {

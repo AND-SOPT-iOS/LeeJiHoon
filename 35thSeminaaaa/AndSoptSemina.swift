@@ -10,14 +10,11 @@ import SwiftUI
 @main
 struct AndSoptSemina: App {
     init() {
-        let standardAppearance = UINavigationBarAppearance()
-        standardAppearance.configureWithDefaultBackground()
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithDefaultBackground()
         
-        let scrollEdgeAppearance = UINavigationBarAppearance()
-        scrollEdgeAppearance.configureWithTransparentBackground() 
-        
-        UINavigationBar.appearance().standardAppearance = standardAppearance
-        UINavigationBar.appearance().scrollEdgeAppearance = scrollEdgeAppearance
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
     
     var body: some Scene {
@@ -26,11 +23,4 @@ struct AndSoptSemina: App {
         }
     }
 }
-struct NavControllerView: UIViewControllerRepresentable {
-    func makeUIViewController(context: Context) -> UINavigationController {
-        let navigationController = UINavigationController(rootViewController: UIViewController())
-        return navigationController
-    }
-    
-    func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {}
-}
+

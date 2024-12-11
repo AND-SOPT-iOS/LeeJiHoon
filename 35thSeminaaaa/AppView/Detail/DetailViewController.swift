@@ -83,10 +83,14 @@ class DetailViewController: UIViewController {
         $0.textColor = .gray
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+       // setupNavigationBar()
+    }
+    
+    private func setupNavigationBar() {
+        self.hidesBottomBarWhenPushed = false
     }
     
     private func setupUI() {
@@ -102,6 +106,7 @@ class DetailViewController: UIViewController {
         
         setupConstraints()
     }
+    
     
     private func setupConstraints() {
         scrollView.snp.makeConstraints {
@@ -181,9 +186,11 @@ class DetailViewController: UIViewController {
             $0.leading.equalTo(ageRatingDescriptionLabel)
         }
     }
+    
     func configure(with app: AppInfo) {
         appNameLabel.text = app.name
         appDescriptionLabel.text = app.description
         appIconImageView.image = UIImage(named: app.iconName)
     }
+    
 }
