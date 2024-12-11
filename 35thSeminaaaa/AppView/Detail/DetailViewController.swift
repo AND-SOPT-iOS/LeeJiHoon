@@ -181,4 +181,9 @@ class DetailViewController: UIViewController {
             $0.leading.equalTo(ageRatingDescriptionLabel)
         }
     }
+    func configure(with app: AppInfo) {
+        appNameLabel.text = app.name
+        appDescriptionLabel.text = app.description
+        appIconImageView.image = UIImage(named: app.iconName)
+    }
 }

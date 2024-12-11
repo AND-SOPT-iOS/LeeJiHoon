@@ -33,9 +33,33 @@ struct AppView: View {
                     scrollOffset = value
                 }
             }
+            .onAppear() {
+                setupNavigation()
+            }
             .navigationBarTitleDisplayMode(scrollOffset > -30 ? .large : .inline)
             .navigationTitle("앱")
 
+        }
+    }
+    
+    private func setupNavigation() {
+        viewModel.showDetailVC = { app in
+            guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                  let window = windowScene.windows.first,
+                  let topViewController = window.rootViewController?.topMostViewController else { return }
+                  
+            let detailVC = DetailViewController()
+            detailVC.configure(with: app)
+            
+            if let nav = topViewController as? UINavigationController {
+                nav.pushViewController(detailVC, animated: true)
+            }
+            else if let nav = topViewController.navigationController {
+                nav.pushViewController(detailVC, animated: true)
+            }
+            else {
+                topViewController.present(detailVC, animated: true)
+            }
         }
     }
     
@@ -80,8 +104,10 @@ struct AppView: View {
                     .padding(.bottom, 8)
                 
                 VStack(spacing: 0) {
+                    // AppView.swift의 ForEach 부분:
                     ForEach(viewModel.recommendedApps) { app in
-                        AppRowView(app: app)
+                        AppRowView(app: app, viewModel: viewModel)
+                    
                         if app.id != viewModel.recommendedApps.last?.id {
                             Divider()
                                 .padding(.leading, 76)
@@ -107,5 +133,20 @@ struct OffsetPreferenceKey: PreferenceKey {
     static var defaultValue: CGFloat = 0
     static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
         value = nextValue()
+    }
+}
+
+extension UIViewController {
+    var topMostViewController: UIViewController {
+        if let presented = presentedViewController {
+            return presented.topMostViewController
+        }
+        if let navigation = self as? UINavigationController {
+            return navigation.visibleViewController?.topMostViewController ?? navigation
+        }
+        if let tab = self as? UITabBarController {
+            return tab.selectedViewController?.topMostViewController ?? tab
+        }
+        return self
     }
 }

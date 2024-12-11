@@ -7,18 +7,23 @@
 
 import SwiftUI
 
-
 class AppViewModel: ObservableObject {
     @Published var categories: [CategoryItem] = []
     @Published var recommendedApps: [AppInfo] = []
     @Published var promotions: [PromotionBanner] = []
     
+    var showDetailVC : ((AppInfo) -> Void)?
+    
     init() {
         loadData()
     }
     
+    func showDetail(app: AppInfo) {
+        showDetailVC?(app)
+    }
+    
     private func loadData() {
-        categories = CategoryItem.sampleCategories    
+        categories = CategoryItem.sampleCategories
         recommendedApps = AppInfo.sampleRecommendedApps
         promotions = PromotionBanner.samplePromotions
     }

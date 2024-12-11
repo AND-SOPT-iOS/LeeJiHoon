@@ -9,9 +9,12 @@ import SwiftUI
 
 struct AppRowView: View {
     let app: AppInfo
-    
+    @ObservedObject var viewModel: AppViewModel
+
     var body: some View {
-        NavigationLink(destination: AppDetailView(app: app)) {
+        Button(action: {
+            viewModel.showDetail(app: app)
+         }) {
             HStack(spacing: 16) {
                 Image(app.iconName)
                     .resizable()
