@@ -67,7 +67,6 @@ class DetailViewController: UIViewController {
     private var receivedTitle: String?
     private var receivedContent: String?
 
-    // 기본 초기화 메서드
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
