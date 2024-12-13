@@ -12,6 +12,8 @@ import Then
 
 class DetailViewController: UIViewController {
     
+    private var viewModel: DetailViewModel?
+    
     private let scrollView = UIScrollView()
     private let contentView = UIView()
     
@@ -86,7 +88,6 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-       // setupNavigationBar()
     }
     
     private func setupNavigationBar() {
@@ -106,7 +107,6 @@ class DetailViewController: UIViewController {
         
         setupConstraints()
     }
-    
     
     private func setupConstraints() {
         scrollView.snp.makeConstraints {
@@ -146,6 +146,7 @@ class DetailViewController: UIViewController {
             $0.trailing.equalTo(contentView).offset(-20)
             $0.width.height.equalTo(30)
         }
+        
         ratingView.snp.makeConstraints {
             $0.top.equalTo(appIconImageView.snp.bottom).offset(30)
             $0.leading.equalTo(contentView).offset(20)
@@ -188,9 +189,11 @@ class DetailViewController: UIViewController {
     }
     
     func configure(with app: AppInfo) {
-        appNameLabel.text = app.name
-        appDescriptionLabel.text = app.description
-        appIconImageView.image = UIImage(named: app.iconName)
+        let viewModel = DetailViewModel(appInfo: app)
+        self.viewModel = viewModel
+        
+        appNameLabel.text = viewModel.name
+        appDescriptionLabel.text = viewModel.description
+        appIconImageView.image = UIImage(named: viewModel.iconName)
     }
-    
 }
