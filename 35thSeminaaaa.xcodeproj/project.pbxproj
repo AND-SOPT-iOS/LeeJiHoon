@@ -3,10 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
+		789962C22CFD78AB00342E62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789962C12CFD78AB00342E62 /* ContentView.swift */; };
+		7899642D2D08ACE700342E62 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 7899642C2D08ACE700342E62 /* Then */; };
+		78E6CF3B2CBA5C53001CEDCE /* AndSoptSemina.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E6CF3A2CBA5C53001CEDCE /* AndSoptSemina.swift */; };
+		78E6CF442CBA5C54001CEDCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E6CF432CBA5C54001CEDCE /* Assets.xcassets */; };
+		78E6CF472CBA5C54001CEDCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E6CF452CBA5C54001CEDCE /* LaunchScreen.storyboard */; };
+=======
 		782E8C4C2CCCAF0100C8CB15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E8C4B2CCCAF0100C8CB15 /* ViewController.swift */; };
 		782E8C4E2CCCAF0900C8CB15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E8C4D2CCCAF0900C8CB15 /* SceneDelegate.swift */; };
 		782E8C512CCCB51900C8CB15 /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782E8C502CCCB51900C8CB15 /* ChartCell.swift */; };
@@ -31,12 +38,16 @@
 		78E6CF442CBA5C54001CEDCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E6CF432CBA5C54001CEDCE /* Assets.xcassets */; };
 		78E6CF472CBA5C54001CEDCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78E6CF452CBA5C54001CEDCE /* LaunchScreen.storyboard */; };
 		78E6CF532CBA5D13001CEDCE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E6CF522CBA5D13001CEDCE /* DetailViewController.swift */; };
+>>>>>>> main
 		78E6CF572CBA5D5D001CEDCE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 78E6CF562CBA5D5D001CEDCE /* SnapKit */; };
 		78E6CF592CBA5E1C001CEDCE /* TossViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E6CF582CBA5E1C001CEDCE /* TossViewcontroller.swift */; };
 		78E6CF5C2CBA5EAE001CEDCE /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 78E6CF5B2CBA5EAE001CEDCE /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
+		789962C12CFD78AB00342E62 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+=======
 		782E8C4B2CCCAF0100C8CB15 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		782E8C4D2CCCAF0900C8CB15 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		782E8C502CCCB51900C8CB15 /* ChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCell.swift; sourceTree = "<group>"; };
@@ -57,14 +68,26 @@
 		786132002CD6047F005DB05A /* HobbyRespose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbyRespose.swift; sourceTree = "<group>"; };
 		786132022CD60493005DB05A /* UpdateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRequest.swift; sourceTree = "<group>"; };
 		786132042CD6055D005DB05A /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+>>>>>>> main
 		78E6CF372CBA5C53001CEDCE /* 35thSeminaaaa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 35thSeminaaaa.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		78E6CF3A2CBA5C53001CEDCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		78E6CF3A2CBA5C53001CEDCE /* AndSoptSemina.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AndSoptSemina.swift; sourceTree = "<group>"; };
 		78E6CF432CBA5C54001CEDCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78E6CF462CBA5C54001CEDCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78E6CF482CBA5C54001CEDCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
 		78E6CF522CBA5D13001CEDCE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		78E6CF582CBA5E1C001CEDCE /* TossViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TossViewcontroller.swift; sourceTree = "<group>"; };
+>>>>>>> main
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		789963752CFD87E700342E62 /* GameView */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = GameView; sourceTree = "<group>"; };
+		789963762CFD87F300342E62 /* TodayView */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = TodayView; sourceTree = "<group>"; };
+		789963772CFD87FF00342E62 /* AppView */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = AppView; sourceTree = "<group>"; };
+		789963782CFD880500342E62 /* ArcadeView */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ArcadeView; sourceTree = "<group>"; };
+		789963792CFD881000342E62 /* SearchView */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = SearchView; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		78E6CF342CBA5C53001CEDCE /* Frameworks */ = {
@@ -73,7 +96,11 @@
 			files = (
 				786131F12CD5F0D6005DB05A /* Alamofire in Frameworks */,
 				78E6CF572CBA5D5D001CEDCE /* SnapKit in Frameworks */,
+<<<<<<< HEAD
+				7899642D2D08ACE700342E62 /* Then in Frameworks */,
+=======
 				78E6CF5C2CBA5EAE001CEDCE /* Then in Frameworks */,
+>>>>>>> main
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +177,15 @@
 		78E6CF392CBA5C53001CEDCE /* 35thSeminaaaa */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
+				789963792CFD881000342E62 /* SearchView */,
+				789963782CFD880500342E62 /* ArcadeView */,
+				789963772CFD87FF00342E62 /* AppView */,
+				789963762CFD87F300342E62 /* TodayView */,
+				789963752CFD87E700342E62 /* GameView */,
+				78E6CF3A2CBA5C53001CEDCE /* AndSoptSemina.swift */,
+				789962C12CFD78AB00342E62 /* ContentView.swift */,
+=======
 				78439EB32CF6D3A700604BFB /* SwiftUI */,
 				782E8C4F2CCCB50A00C8CB15 /* 4thSemina */,
 				78E6CF5D2CBA5EC3001CEDCE /* Practice */,
@@ -157,6 +193,7 @@
 				78E6CF3A2CBA5C53001CEDCE /* AppDelegate.swift */,
 				782E8C4D2CCCAF0900C8CB15 /* SceneDelegate.swift */,
 				782E8C4B2CCCAF0100C8CB15 /* ViewController.swift */,
+>>>>>>> main
 				78E6CF432CBA5C54001CEDCE /* Assets.xcassets */,
 				78E6CF452CBA5C54001CEDCE /* LaunchScreen.storyboard */,
 				78E6CF482CBA5C54001CEDCE /* Info.plist */,
@@ -167,6 +204,8 @@
 			path = 35thSeminaaaa;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+=======
 		78E6CF542CBA5D44001CEDCE /* assignment */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +224,7 @@
 			path = Practice;
 			sourceTree = "<group>";
 		};
+>>>>>>> main
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,11 +240,22 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				789963752CFD87E700342E62 /* GameView */,
+				789963762CFD87F300342E62 /* TodayView */,
+				789963772CFD87FF00342E62 /* AppView */,
+				789963782CFD880500342E62 /* ArcadeView */,
+				789963792CFD881000342E62 /* SearchView */,
+			);
 			name = 35thSeminaaaa;
 			packageProductDependencies = (
 				78E6CF562CBA5D5D001CEDCE /* SnapKit */,
+<<<<<<< HEAD
+				7899642C2D08ACE700342E62 /* Then */,
+=======
 				78E6CF5B2CBA5EAE001CEDCE /* Then */,
 				786131F02CD5F0D6005DB05A /* Alamofire */,
+>>>>>>> main
 			);
 			productName = 35thSeminaaaa;
 			productReference = 78E6CF372CBA5C53001CEDCE /* 35thSeminaaaa.app */;
@@ -236,8 +287,12 @@
 			mainGroup = 78E6CF2E2CBA5C53001CEDCE;
 			packageReferences = (
 				78E6CF552CBA5D5D001CEDCE /* XCRemoteSwiftPackageReference "SnapKit" */,
+<<<<<<< HEAD
+				7899642B2D08ACE700342E62 /* XCRemoteSwiftPackageReference "Then" */,
+=======
 				78E6CF5A2CBA5EAE001CEDCE /* XCRemoteSwiftPackageReference "Then" */,
 				786131EF2CD5F0D6005DB05A /* XCRemoteSwiftPackageReference "Alamofire" */,
+>>>>>>> main
 			);
 			productRefGroup = 78E6CF382CBA5C53001CEDCE /* Products */;
 			projectDirPath = "";
@@ -265,6 +320,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
+				789962C22CFD78AB00342E62 /* ContentView.swift in Sources */,
+				78E6CF3B2CBA5C53001CEDCE /* AndSoptSemina.swift in Sources */,
+=======
 				786131F82CD5FEFB005DB05A /* UserService.swift in Sources */,
 				782E8C592CCCC6FA00C8CB15 /* PhotoViewController.swift in Sources */,
 				786131F42CD5F379005DB05A /* Environment.swift in Sources */,
@@ -287,6 +346,7 @@
 				786131FA2CD5FF92005DB05A /* LoginViewController.swift in Sources */,
 				782E8C512CCCB51900C8CB15 /* ChartCell.swift in Sources */,
 				786131FF2CD6046C005DB05A /* RegisterResponse.swift in Sources */,
+>>>>>>> main
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,12 +563,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+<<<<<<< HEAD
+		7899642B2D08ACE700342E62 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+=======
 		786131EF2CD5F0D6005DB05A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.10.1;
+>>>>>>> main
 			};
 		};
 		78E6CF552CBA5D5D001CEDCE /* XCRemoteSwiftPackageReference "SnapKit" */ = {
@@ -530,10 +599,17 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+<<<<<<< HEAD
+		7899642C2D08ACE700342E62 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7899642B2D08ACE700342E62 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+=======
 		786131F02CD5F0D6005DB05A /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 786131EF2CD5F0D6005DB05A /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+>>>>>>> main
 		};
 		78E6CF562CBA5D5D001CEDCE /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;

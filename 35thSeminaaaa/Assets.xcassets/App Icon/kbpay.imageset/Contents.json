@@ -1,27 +1,15 @@
 {
   "images" : [
     {
-<<<<<<< HEAD
-=======
-      "filename" : "toss.png",
->>>>>>> main
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-<<<<<<< HEAD
-      "filename" : "appImageIcon.png",
-=======
-      "filename" : "toss 1.png",
->>>>>>> main
+      "filename" : "kbpay.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-<<<<<<< HEAD
-=======
-      "filename" : "toss 2.png",
->>>>>>> main
       "idiom" : "universal",
       "scale" : "3x"
     }

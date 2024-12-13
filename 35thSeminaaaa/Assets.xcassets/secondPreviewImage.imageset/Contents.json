@@ -1,27 +1,15 @@
 {
   "images" : [
     {
-<<<<<<< HEAD
-=======
-      "filename" : "toss.png",
->>>>>>> main
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-<<<<<<< HEAD
-      "filename" : "appImageIcon.png",
-=======
-      "filename" : "toss 1.png",
->>>>>>> main
+      "filename" : "B77516A7-90D0-4E91-8F1C-F0DEE1A09F35_1_201_a.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-<<<<<<< HEAD
-=======
-      "filename" : "toss 2.png",
->>>>>>> main
       "idiom" : "universal",
       "scale" : "3x"
     }
